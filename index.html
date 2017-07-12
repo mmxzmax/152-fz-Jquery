@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="src/personalDataAgree.js"></script>
+</head>
+<body>
+
+
+
+<pre>
+    "personalAgreementUrl":"", url страницы с соглашением
+    "personalAgreementLink":"", текст ссылки на стрнаицу
+    "personalAgreementText":"", текст чекбокса перед ссылкой
+    "beforeSelector":'',        селектор элемента перед которым будет вставлен чекбокс
+    "hideSubmitButton":false    срывать ли кнопку отправки формы если пользователель не отметил флажок
+
+
+    пример использования
+
+    $(document).ready(function(){
+        var settings={
+            personalAgreementUrl:"/",
+            personalAgreementText:"подтверждаю согласие на обработку ",
+            personalAgreementLink:"персональных данных",
+            hideSubmitButton:true
+        };
+       $('#form1').personalDataCheckBox(settings);
+    });
+
+</pre>
+
+<form id="form1">
+    <input type="text">
+    <input type="submit">
+</form>
+<hr>
+
+<pre>
+
+
+     var settings2={
+            personalAgreementUrl:"https://www.google.ru",
+            personalAgreementText:"Что-то еще ",
+            personalAgreementLink:"подтверждаю",
+            hideSubmitButton:false
+        };
+
+        $('#form2').personalDataCheckBox(settings2);
+
+</pre>
+
+
+<form id="form2">
+    <input type="text">
+    <input type="submit">
+</form>
+
+</body>
+
+<script>
+
+    $(document).ready(function(){
+        var settings={
+            personalAgreementUrl:"/",
+            personalAgreementText:"подтверждаю согласие на обработку ",
+            personalAgreementLink:"персональных данных",
+            hideSubmitButton:true
+        };
+        $('#form1').personalDataCheckBox(settings);
+
+
+        var settings2={
+            personalAgreementUrl:"https://www.google.ru",
+            personalAgreementText:"Что-то еще ",
+            personalAgreementLink:"подтверждаю",
+            hideSubmitButton:false
+        };
+
+        $('#form2').personalDataCheckBox(settings2);
+    });
+
+
+</script>
+
+</html>
