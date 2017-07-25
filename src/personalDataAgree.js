@@ -25,6 +25,7 @@
             link.bind('click',function(e){
                 if($(this).closest('form').find(settings.beforeSelector).hasClass('_no-active')){
                     e.preventDefault();
+                    $(self).find('.agreement-block').addClass('error');
                 }
             });
             var checkbox=$(self).find('.agree');
