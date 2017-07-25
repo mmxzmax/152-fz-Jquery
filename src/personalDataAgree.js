@@ -26,6 +26,8 @@
                 if($(this).closest('form').find(settings.beforeSelector).hasClass('_no-active')){
                     e.preventDefault();
                     $(self).find('.agreement-block').addClass('error');
+                } else {
+                    $(self).find('.agreement-block').removeClass('error');
                 }
             });
             var checkbox=$(self).find('.agree');
